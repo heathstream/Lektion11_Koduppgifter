@@ -12,4 +12,13 @@
             person.Introduce();
         }
     }
+
+    public enum Grade
+    {
+        A,
+        B,
+        C,
+        D,
+        F
+    }
 }
