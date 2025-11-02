@@ -27,5 +27,7 @@
         public string StudentName;
         public Grade StudentGrade;
         public DateTime ExamDate;
+
+        public bool IsPassingGrade() => StudentGrade > Grade.F;
     }
 }
