@@ -10,6 +10,19 @@
 
             Person person = new("Anders", 32);
             person.Introduce();
+
+            StudentRecord[] studentRecords = new StudentRecord[3];
+            for (int i = 0; i < studentRecords.Length; i++)
+            {
+                studentRecords[i] = new StudentRecord();
+                studentRecords[i].StudentName = "Test Testsson";
+                studentRecords[i].StudentGrade = Grade.B;
+                studentRecords[i].ExamDate = new DateTime(2025, 11, 14);
+            }
+            foreach (var record in studentRecords)
+            {
+                Console.WriteLine($"Student: {record.StudentName}, Grade: {record.StudentGrade}, Exam date: {record.ExamDate.ToString("d")}");
+            }
         }
     }
 
