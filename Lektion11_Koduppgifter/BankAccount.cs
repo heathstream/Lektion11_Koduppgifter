@@ -19,5 +19,11 @@ namespace Lektion11_Koduppgifter
                 Console.WriteLine($"{amount.ToString("c")} has been withdrawn.");
             }
         }
+
+        public void Deposit(decimal amount)
+        {
+            Balance += amount;
+            Console.WriteLine($"{amount.ToString("c")} has been desposited.");
+        }
     }
 }
