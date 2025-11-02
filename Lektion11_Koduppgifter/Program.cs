@@ -21,4 +21,11 @@
         D,
         F
     }
+
+    public struct StudentRecord
+    {
+        public string StudentName;
+        public Grade StudentGrade;
+        public DateTime ExamDate;
+    }
 }
