@@ -11,13 +11,20 @@ namespace Lektion11_Koduppgifter
         public decimal Balance { get; private set; }
         public int AccountNumber { get; }
 
-        public void Withdraw(decimal amount)
+        public bool Withdraw(decimal amount)
         {
+            if (amount <= 0)
+            {
+                Console.WriteLine("Invalid amount.");
+                return false;
+            }
             if (Balance >= amount)
             {
                 Balance -= amount;
                 Console.WriteLine($"{amount.ToString("c")} has been withdrawn.");
+                return true;
             }
+            return false;
         }
 
         public void Deposit(decimal amount)
