@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, Git!");
+            string name = "Anders";
+            Console.WriteLine($"Hello Git from {name}!");
         }
     }
 }
