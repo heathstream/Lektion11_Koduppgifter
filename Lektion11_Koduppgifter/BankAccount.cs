@@ -10,5 +10,14 @@ namespace Lektion11_Koduppgifter
     {
         public decimal Balance { get; private set; }
         public int AccountNumber { get; }
+
+        public void Withdraw(decimal amount)
+        {
+            if (Balance >= amount)
+            {
+                Balance -= amount;
+                Console.WriteLine($"{amount.ToString("c")} has been withdrawn.");
+            }
+        }
     }
 }
